@@ -146,6 +146,11 @@ int main(){
 
     while (window.isOpen()){
         sf::Event event;
+ 
+        ship.rotateShip();
+ 
+ 
+ 
         if (window.pollEvent(event)){
             if (event.type == sf::Event::Closed)
                 window.close();
@@ -160,7 +165,6 @@ int main(){
             
         }
 
-        ship.rotateShip();
         ship.accelerateShip();
         ship.moveShip();
 
